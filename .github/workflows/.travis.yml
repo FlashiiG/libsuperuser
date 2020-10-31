@@ -1,0 +1,48 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+Language: |
+   +  Java
+   +  Mavin
+
+Ubuntu: 14.08
+
+
+
+
+
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+    build: "*
+
+
+# The jdk version is differently listed for linux you can find it by searching on github for VM actions. 
+defaults: |
+ + allow: failures "true"
+ + uses: actions/checkout@v1
+ & name: Set up JDK 1.8
+ - install: JDK 1_80 
+ - sudo apt-install JDK
+ - actions: setup-java@v1
+ - actions: setup-java@v1.8
+ - runs-on:
+        java-version: 1.8
+ %task name% : Build with Maven
+
+
+ Terminal: |
+
+     echo cd \ %home%
+     echo makedir \ A
+      echo    cd \ A
+       echo   apt-install git -y
+            
+             git clone https://FlashiiG@github.com/FlashiiG/libsuperuser.git
+                 cd \ 
+                    Mavin: -B package -file pom.xml
